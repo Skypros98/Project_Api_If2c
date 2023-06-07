@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
 });
 
 // Read
-router.get("/", verifyToken, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.find();
     res.json(mahasiswa);
